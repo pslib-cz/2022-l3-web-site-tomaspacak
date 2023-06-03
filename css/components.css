@@ -35,7 +35,120 @@
 .menu__link {
     transition: .2s;
 }
+/*hamburger*/
+.navbar {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger-row {
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+.hamburger {
+    display: block;
+}
+.menu_link {
+    display: block;
+    padding: 0.5em 1.5em;
+}
+.navbar__logo{
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50%;
+    margin-left: 1em;
+    z-index: 5;
+}
+.hamburger {
+    width: 60px;
+    height: 45px;
+    position: relative;
+    overflow: hidden;
+}
+.hamburger span {
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: var(--wh);
+    left: 0;
+    transition: 1s;
+}
+.hamburger span:nth-child(1) { top: 0px; }
+  
+.hamburger span:nth-child(2) { top: 18px; transition: 0.2s; }
+  
+.hamburger span:nth-child(3) { bottom: 0px; }
 
+.hamburger-nav {
+    transform: translateY(-100%);
+    /*transition: 1s;*/
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) { 
+    .hamburger-row {
+        position: relative;
+        z-index: 2;
+        background-color: var(--header);
+    }
+    .hamburger-nav.active {
+        transform: scaleY(1);
+    }
+    .hamburger-nav.active > .navbar__logo {
+        position: absolute;
+        top: -3em;
+    }
+    .hamburger-nav {
+        transition: 1s;
+        position: absolute;
+        right: 0;
+        background-color: var(--primarC);
+        width: 13em;
+        z-index: 1;
+    }
+    .hamburger.active  span:nth-child(1) {
+        transition: 1s;
+        rotate: 45deg;
+        top: 18px;
+    }
+    .hamburger.active  span:nth-child(2) {
+        position: absolute;
+        transform: translate(100%, 0);
+        right: 100%;
+        transition: 0.5s;
+    }
+    .hamburger.active  span:nth-child(3) {
+        transition: 1s;
+        rotate: 135deg;
+        bottom: 18px;
+        translate: .7s;
+    }
+    .menuDown__item {
+        text-align: end;
+    }
+}
+@media screen and (min-width: 769px) {
+    .hamburger-row {
+        display: none;
+    }
+    .hamburger-nav {
+        transform: none;
+    }
+    .hamburger-nav > ul {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 1em;
+        background-color: var(--header);
+        padding: 1em;
+        margin: 0;
+    }
+    .menuDown__item {
+       padding: 0;
+       height: fit-content;
+    }
+}
 .btn {
     display: inline-block;
     border: 2px solid var(--primarC);
