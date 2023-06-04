@@ -17,18 +17,27 @@
     <link rel="preload" href="./img/mapa_DT.webp" as="image">
     <link rel="preload" href="./css/critical.css" as="style">
     <link rel="preload" href="./css/criticalKontakt.css" as="style">
-
+    <script src="./hamburger.js"></script>
 </head>
 <body>
     <header>
-        <nav class="menu">
-            <a class="menu_link" href="./index.html"><img class="menu__logo" src="./img/logo_menu.svg" alt="Logo"></a>
-            <menu class="menu__links">
-              <li class="menu_link"><a href="./index.html">Domů</a></li>
-              <li class="menu_link"><a href="./Onas.html">O nás</a></li>
-              <li class="menu_link"><a href="./kontakt.html">Kontakt</a></li>
-            </menu>
-        </nav>
+        <div class="navbar">
+            <a href="./index.html" class="navbar__logo"><img class="menu__logo" src="./img/logo_menu.svg" alt="Logo"></a>
+            <div class="hamburger-row">
+                <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <nav class="hamburger-nav hamburger-zone">
+                <menu>
+                    <li class="menu__link"><a href="./index.html">Domů</a></li>
+                    <li class="menu__link"><a href="./Onas.html">O nás</a></li>
+                    <li class="menu__link"><a href="./kontakt.html">Kontakt</a></li>
+                </menu>
+            </nav>
+        </div>
     </header>
     <section>
         <h1>Kontakt</h1>
@@ -75,7 +84,7 @@
             </div>
         </div>
         <div class="footer__icons">
-            <a class="menu_link" href="./index.html"><img src="./img/logo_menu.svg" alt="logo masáží v Liberci Dotek Pohody"></a>
+            <a href="./index.html"><img class="menu__logo" src="./img/logo_menu.svg" alt="logo masáží v Liberci Dotek Pohody"></a>
             <div>
                 <a href="#"><img src="./img/facebook_footer.svg" alt="logo Facebooku"></a>
                 <a href="#"><img src="./img/instagram_footer.svg" alt="logo Instagramu"></a>

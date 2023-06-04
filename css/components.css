@@ -19,8 +19,12 @@
     background-color: var(--header);
 }
 .menu__logo {
-    width: 2em;
-    height: 2em;
+    transition: .2s;
+}
+.menu__logo:hover {
+    transform: scale(1.1);
+    transition: .2s;
+    width: 100%;
 }
 .menu__links {
     display: flex;
@@ -28,13 +32,7 @@
     text-decoration: none;
     list-style-type: none;
 }
-.menu_link:hover {
-    transform: scale(1.1);
-    transition: .2s;
-}
-.menu__link {
-    transition: .2s;
-}
+
 /*hamburger*/
 .navbar {
     position: relative;
@@ -49,9 +47,8 @@
 .hamburger {
     display: block;
 }
-.menu_link {
+.menu__link {
     display: block;
-    padding: 0.5em 1.5em;
 }
 .navbar__logo{
     position: absolute;
@@ -82,7 +79,6 @@
 
 .hamburger-nav {
     transform: translateY(-100%);
-    /*transition: 1s;*/
     z-index: 1;
 }
 
@@ -124,7 +120,8 @@
         bottom: 18px;
         translate: .7s;
     }
-    .menuDown__item {
+    .menu__link {
+        padding: 0.5em 1.5em;
         text-align: end;
     }
 }
@@ -135,7 +132,7 @@
     .hamburger-nav {
         transform: none;
     }
-    .hamburger-nav > ul {
+    .hamburger-nav > menu {
         display: flex;
         justify-content: end;
         align-items: center;
@@ -144,9 +141,13 @@
         padding: 1em;
         margin: 0;
     }
-    .menuDown__item {
-       padding: 0;
-       height: fit-content;
+    .menu__link:hover {
+        transform: scale(1.1);
+        transition: .2s;
+    }
+    .menu__link {
+        transition: .2s;
+        padding: 0;
     }
 }
 .btn {

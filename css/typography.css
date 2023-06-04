@@ -33,7 +33,7 @@ h1 {
     margin-bottom: 0.5em;
 }
 
-.menu_link a {
+.menu__link a {
     font-size: 17px;
     font-weight: 700;
     color: var(--wh);
